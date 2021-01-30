@@ -20,7 +20,7 @@ func main() {
         }
 	var m MacAddress
 
-	resp, err := http.Get("https://api.maclookup.app/v1/macs/" + os.Args[1])
+	resp, err := http.Get("https://api.maclookup.app/v2/macs/" + os.Args[1] + "/company/name")
 	defer resp.Body.Close()
 	body, err := ioutil.ReadAll(resp.Body)
 	if err != nil {
